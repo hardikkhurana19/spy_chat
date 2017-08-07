@@ -7,7 +7,6 @@ while(var==1):
     print "Guess a Number Between 1 to 9 (1 & 9 included) press 0 to exit"
     user = int(raw_input("Enter the Number "))
     if (user==0):
-        print "you were"+str(count)
         exit()
     elif  (user>0) and (user<10) :
         print "you choosed "+str(user)
