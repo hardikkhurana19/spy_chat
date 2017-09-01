@@ -36,7 +36,11 @@ while ch == 'y' or ch == 'Y':
     tries = tries+1
     print "Score:\nTries = "+str(tries)+"\nWins's = "+str(win)+"\nLose = "+str(lose)
     ch = raw_input("Wanna try again\nPress (Y/N)")
+
 if ch == 'n' or ch == 'N':
     print "Well played!!!!"
     print "Score:\nTries = " + str(tries) + "\nWins's = " + str(win) + "\nLose = " + str(lose)
     exit()
+
+else:
+    print "Wrong Choice \nTry Again"
