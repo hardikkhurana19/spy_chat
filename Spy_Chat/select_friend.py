@@ -4,7 +4,7 @@ from globals import friends
 def select_friend():
     counter = 1
     for friend in friends:
-        print str(counter)+". "+friend['salutation'] + " " + friend['name']
+        print str(counter)+". " + friend['name']
         counter += 1
 
     user_input = int(raw_input("Choose the friend\n"))

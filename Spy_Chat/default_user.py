@@ -11,39 +11,41 @@ def age():
 
 
 def rating():
-    try:
-        spy_rating = int(raw_input("How much you rate yourself----->\nB/W (0-5)"))
-        if spy_rating == 0:
-            print "Not Good Start Working on yourself"
-        elif spy_rating > 0 and spy_rating < 1:
-            print "Good but need improvement"
+    while True:
+        try:
+            spy_rating = int(raw_input("How much you rate yourself----->\nB/W (0-5)"))
+            if spy_rating == 0:
+                print "Not Good Start Working on yourself"
+            elif spy_rating > 0 and spy_rating < 1:
+                print "Good but need improvement"
+                return spy_rating
 
-        elif spy_rating >= 1 and spy_rating < 2:
-            print "NIce "
+            elif spy_rating >= 1 and spy_rating < 2:
+                print "NIce "
+                return spy_rating
 
-        elif spy_rating >= 2 and spy_rating <3:
-            print "Very good"
+            elif spy_rating >= 2 and spy_rating <3:
+                print "Very good"
+                return spy_rating
 
-        elif spy_rating >= 3 and spy_rating <4:
-            print "Great"
+            elif spy_rating >= 3 and spy_rating <4:
+                print "Great"
+                return spy_rating
 
-        elif spy_rating >= 4 and spy_rating <5:
-            print "Excellent"
+            elif spy_rating >= 4 and spy_rating <5:
+                print "Excellent"
+                return spy_rating
 
-        elif spy_rating == 5:
-            print "ACE!!!!!!!!!!"
+            elif spy_rating == 5:
+                print "ACE!!!!!!!!!!"
+                return spy_rating
 
-        else:
-            print "Wrong choice"
-            choice = raw_input("Wanna Try Again (Y/N)")
-            if choice == "y" or choice == "Y":
-                rating()
             else:
-                exit()
-        return spy_rating
-    except ValueError:
-        print "Wrong Spy Rating \n Rating should be B/W (0-5)"
-        rating()
+                print "Wrong choice"
+
+        except ValueError:
+            print "Wrong Spy Rating \n Rating should be B/W (0-5)"
+
 
 
 def name():
@@ -61,3 +63,4 @@ def details():
     b = age()
     c = rating()
     print "Welcome Mr. %s you are %s years old and you rated yourself %s" % (a, b, c)
+
