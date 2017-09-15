@@ -24,7 +24,7 @@ def choices():
                     current_status_message = status(current_status_message)
             elif choice == 2:
                 total = add_friend()
-                print "You have " + str(total) + " Friends."
+                print "Total Friend's = " + str(total)
 
             elif choice == 3:
                     send_message()
@@ -40,5 +40,5 @@ def choices():
                     cprint("Wrong Choice", "red", attrs=["bold"])
                     loop = False
         except ValueError:
-            cprint ("Choose from the above please", "green", attrs=["bold"])
+            cprint("Choose from the above please", "green", attrs=["bold"])
 

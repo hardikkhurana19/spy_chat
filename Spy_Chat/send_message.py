@@ -11,17 +11,25 @@ def send_message():
 
         original_image = raw_input("Choose the image to hide the text:")
         output_path = raw_input("Enter the name of output image:")
-        text = raw_input("Enter your message:")
-        Steganography.encode(original_image, output_path, text)
+        while True:
+            text = raw_input("Enter your message:")
+            if len(text) >= 1:
+                if len(text)<100:
+                    Steganography.encode(original_image, output_path, text)
 
-        new_chat = {
-            "message": text,
-            "time": datetime.now(),
-            "sent_by_me": True
+                    new_chat = {
+                        "message": text,
+                        "time": datetime.now(),
+                        "sent_by_me": True
 
-        }
+                    }
 
-        # friends[friend_choice]['chats'].append(new_chat)
-        print "Your secret message is ready "
+                    # friends[friend_choice]['chats'].append(new_chat)
+                    cprint("Your secret message is ready ", "blue", attrs=['bold'])
+                    break
+                else:
+                    cprint("message must have less than 100 characters", "red")
+            else:
+                cprint("Enter some message to send", "red")
     else:
-        cprint("You Don't have any friends yet -_-")
+        cprint("You Don't have any friends yet -_-", "grey")
