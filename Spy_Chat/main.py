@@ -8,7 +8,7 @@ while True:
     cprint("Let's Get Started!!", "cyan", attrs=['dark', 'underline', 'bold'])
     choice = raw_input(colored("Do you want to continue as "+spy['name']+" "+spy['salutation']+" or not (Y/N)\n", "yellow"))
     if choice == "y" or choice == "Y":
-        cprint("Welcome " + spy['name']+" "+spy['salutation'], "blue")
+        cprint("Welcome " + spy['name']+" "+spy['salutation'], "magenta", attrs=["bold"])
         while True:
                 choices()
     elif choice == "n" or choice == "N":
@@ -20,5 +20,6 @@ while True:
             cprint("you pressed the quit button \n     GoodBye!!!", "red")
             exit()
         cprint("please try again", "red")
-        cprint("For exit press E", "red" , attrs=["bold"])
+        cprint("For exit press E", "red", attrs=["bold"])
+
 
