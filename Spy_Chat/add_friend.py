@@ -11,7 +11,8 @@ def add_friend():
         'is_online': False,
         'chats':[]
         }
-
+    # Adding new friend
+    # Verification done using regex
     new_friend['name'] = raw_input(colored("Enter your Friend's Name\n", "yellow"))
     while new_friend['name'].isalpha() == False:
         cprint("Name can't be empty and only contains alphabets", "red")

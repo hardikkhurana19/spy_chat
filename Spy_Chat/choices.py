@@ -3,6 +3,7 @@ from add_friend import add_friend
 from send_message import send_message
 from read_message import read_message
 from termcolor import cprint
+from read_chat import read_chat
 
 
 def choices():
@@ -24,15 +25,15 @@ def choices():
                     current_status_message = status(current_status_message)
             elif choice == 2:
                 total = add_friend()
-                print "Total Friend's = " + str(total)
-
+                c = "Total Friend's = " + str(total)
+                cprint(c, "magenta")
             elif choice == 3:
                     send_message()
 
             elif choice == 4:
                     read_message()
             elif choice == 5:
-                    print
+                    read_chat()
             elif choice == 6:
                     cprint("Thank You\nGood Bye!!!!!!!!!!!!!!", "red")
                     exit()

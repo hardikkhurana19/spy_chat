@@ -1,4 +1,5 @@
 from globals import friends
+from termcolor import colored,cprint
 
 
 def select_friend():
@@ -7,9 +8,9 @@ def select_friend():
         print str(counter)+". " + friend['name']
         counter += 1
 
-    user_input = int(raw_input("Choose the friend\n"))
+    user_input = int(raw_input(colored("Choose the friend\n", 'yellow')))
     if user_input <= counter:
         return user_input-1
     else:
-        print "wrong Choice"
+        cprint("wrong Choice", "red")
         return 1
